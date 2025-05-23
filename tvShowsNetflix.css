@@ -1,0 +1,174 @@
+/* ==== GENERALI ==== */
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #141414;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+main {
+  background-color: #141414;
+}
+
+.wrapper {
+  padding-left: 2em;
+  padding-right: 0;
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  background-color: #141414;
+}
+
+.navbar-brand img {
+  height: 50px;
+  width: auto;
+}
+
+.navbar .nav-link {
+  color: rgb(165, 165, 165);
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #e50914 !important;
+}
+
+/* ==== SEZIONI ==== */
+.sezione {
+  margin-bottom: 3em;
+}
+
+.carousel-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ==== CAROSELLO ==== */
+.carousel-wrapper {
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-behavior: smooth;
+  padding: 0.5rem 0;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE/Edge */
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+  /* Chrome/Safari */
+}
+
+.card-copertina {
+  flex: 0 0 50%;
+}
+
+.card-copertina:hover {
+  transform: scale(1.05);
+}
+
+.card-copertina img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==== FRECCE ==== */
+.freccia {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carousel-wrapper:hover .freccia {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.freccia:hover {
+  background-color: #e50914;
+}
+
+.freccia.sinistra {
+  left: 0;
+}
+
+.freccia.destra {
+  right: 0;
+}
+
+/* ==== RESPONSIVE ==== */
+
+@media (min-width: 576px) {
+  .card-copertina {
+    flex: 0 0 33.3333%;
+  }
+
+  .freccia {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .card-copertina {
+    flex: 0 0 25%;
+  }
+
+  .freccia {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .card-copertina {
+    flex: 0 0 16.6666%;
+  }
+
+  .freccia {
+    width: 45px;
+    height: 45px;
+    font-size: 1.6rem;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .card-copertina {
+    flex: 0 0 15%;
+    /* ~7 per riga */
+  }
+
+  .freccia {
+    width: 50px;
+    height: 50px;
+    font-size: 1.8rem;
+  }
+
+}
